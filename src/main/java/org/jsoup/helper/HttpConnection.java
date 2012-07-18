@@ -447,6 +447,8 @@ public class HttpConnection implements Connection {
                 if (dataStream != null) dataStream.close();
             }
 
+            conn.disconnect();
+
             res.executed = true;
             return res;
         }
